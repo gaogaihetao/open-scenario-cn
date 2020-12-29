@@ -1,0 +1,11 @@
+#### 3.1.4. Controllers
+
+`Controller`可以分配给`Vehicle`或`Pedestrian`。一经分配，就可以使用ActivateControllerAction激活对指定域的控制。
+
+当`ActivateControllerAction`运行时，分配到`Controller`的`ScenarioObject`将接管指定域。`Controller`既可以来自内部（仿真器的组成部分），也可以来自外部（由外部文件定义）。`Controller`预期的使用场景包括：
+
+- 说明测试车辆受系统控制
+- 定义“智能演员”行为。此时`Controller`会产生智能的决策，以应对路网环境或其它车辆的干扰。比如想让场景中的物体表现得像人一样时，就可以使用`Controller`。
+- 直接由人控制车辆
+
+在`Controller`元素中，可以直接包含`Properties`元素来指定行为，也可以通过外部`File`引用来指定。
